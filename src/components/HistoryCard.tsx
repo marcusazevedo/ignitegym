@@ -4,7 +4,7 @@ export function HistoryCard(){
   return (
     <HStack w='full' px={5} py={4} mb={3} bg='gray.600' rounded='md' alignItems='center' justifyContent='space-between'>
       <VStack mr={5} flex={1}>
-        <Heading numberOfLines={1} color='white' fontSize='md' textTransform='capitalize'>
+        <Heading fontFamily='heading' numberOfLines={1} color='white' fontSize='md' textTransform='capitalize'>
           Costas
         </Heading>
 
