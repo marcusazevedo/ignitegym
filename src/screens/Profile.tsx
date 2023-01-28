@@ -7,13 +7,15 @@ import { useState } from "react";
 import { TouchableOpacity } from "react-native";
 import * as ImagePicker from 'expo-image-picker';
 import * as FileSystem from 'expo-file-system';
+import { useAuth } from "@hooks/useAuth";
+import userDefaultAvatar from '@assets/userPhotoDefault.png';
 
 const PHOTO_SIZE = 33;
 
 export function Profile(){
   const [photoIsLoading, setPhotoIsLoading] = useState(false);
   const [userPhoto, setUserPhoto] = useState('https://github.com/marcusazevedo.png');
-
+  const { user } = useAuth();
   const toast = useToast();
 
   async function handleUserPhotoSelect(){
@@ -74,7 +76,7 @@ export function Profile(){
           />
           :
           <UserPhoto 
-            source={{uri: userPhoto}}
+          source={user.avatar ? {uri: user.avatar} : userDefaultAvatar}
             size={PHOTO_SIZE}
             alt='Imagem do usuário'
           />
