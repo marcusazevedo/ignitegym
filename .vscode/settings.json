@@ -1,7 +1,17 @@
 {
   "cSpell.words": [
     "dtos",
+    "Entypo",
+    "Exercícios",
     "Imagem",
     "usuário"
-  ]
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:ignitegym}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
 }
